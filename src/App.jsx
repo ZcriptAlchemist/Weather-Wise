@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="h-screen flex flex-col justify-around">
       {weatherDataStatus == "succeeded" ? (
         <>
           <SearchBar />
@@ -30,7 +30,7 @@ function App() {
               <Forecast />
             </>
           ) : (
-            <div className="flex">
+            <div className="flex h-2/3">
               <WeatherCard />
               <Forecast />
             </div>
@@ -39,7 +39,7 @@ function App() {
       ) : (
         <LoadingScreen />
       )}
-    </>
+    </div>
   );
 }
 
