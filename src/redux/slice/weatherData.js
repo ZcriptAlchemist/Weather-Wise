@@ -71,7 +71,7 @@ export const fetchWeatherData = createAsyncThunk(
       alert("Please enter a different place name");
       setTimeout(() => {
         location.reload();
-      }, 1000); // Wait 1 second before reloading the page
+      }, 1000);
       return rejectWithValue(error.message);
     }
   }
